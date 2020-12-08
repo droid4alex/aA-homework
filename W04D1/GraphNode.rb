@@ -11,11 +11,13 @@ class GraphNode
   end
 
   def parent=(parent_node)
-    # self.parent.children << 1 if !self.parent.nil?
-    # p self.parent.children if !self.parent.nil?
-    
+
+    # if parent_node == nil   WHY IS THIS NEEDED??
+    #   @parent = nil
+    #   return nil
+    # end
     @parent.children.delete(self) if @parent != nil
-    parent_node.children << self
+    parent_node.children << self #if !parent_node.children.include?(self)    WHY IS THIS NEEDED??
     @parent = parent_node
   end
 end
