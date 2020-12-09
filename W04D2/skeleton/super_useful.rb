@@ -1,3 +1,4 @@
+class SuperUseful
 # PHASE 2
 def convert_to_int(str)
   Integer(str)
@@ -25,10 +26,14 @@ def feed_me_a_fruit
     puts "I don't like #{maybe_fruit}, now I need coffee"
     #puts "Error was #{e.message}"
     #puts "Feed me #{FRUITS}"    
-    retry if gets.chomp == coffee
+    retry if gets.chomp == "coffee"
   end
 
 end  
+
+end
+s = SuperUseful.new
+s.feed_me_a_fruit
 
 # PHASE 4
 class BestFriend
@@ -50,5 +55,3 @@ class BestFriend
     puts "Hey bestie, I made you a friendship bracelet. It says my name, #{@name}, so you never forget me." 
   end
 end
-
-
